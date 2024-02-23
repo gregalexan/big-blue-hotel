@@ -31,14 +31,20 @@ document.addEventListener('DOMContentLoaded', () => {
             })
         });
     }
-
+    function toggleMenu(language) {
+        console.log("Change: " + language)
+        const hamburgerButton = document.querySelector(`.${language} .hamburger-button`);
+        const mobileMenu = document.querySelector(`.${language} .mobile-menu`);
+        hamburgerButton.addEventListener('click', () => mobileMenu.classList.toggle('active'))
+    }
+    toggleMenu("english");
     initializeFAQ("english"); // Initialize FAQ functionality for English by default
-
     const languageSelect = document.getElementById("languageSelect");
-
     languageSelect.addEventListener("change", () => {
         const selectedLanguage = languageSelect.value;
+        console.log(selectedLanguage)
         initializeFAQ(selectedLanguage); // Initialize FAQ functionality based on the selected language
+        toggleMenu(selectedLanguage);
     });
 });
 
@@ -120,4 +126,3 @@ function openModalGR(image) {
     modal.style.display = 'block';
     modalImg.src = image;
 }
-
