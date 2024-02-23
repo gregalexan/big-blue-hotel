@@ -990,6 +990,10 @@ html {
     font-size: 12px;
     line-height: 1.6;
 }
+/* Mobile Services */
+
+
+
 /* Media Queries */
 @media (max-width: 960px) {
     .navbar ul li a {
@@ -1222,6 +1226,12 @@ html {
         line-height: 2.5;
         display: flex;
         flex-wrap: wrap;
+    }
+    /* Services */
+    .services-column {
+        display: block;
+        width: 150%;
+        margin-bottom: 20px;
     }
 }
 @media (max-width: 500px) {
