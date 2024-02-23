@@ -1,39 +1,48 @@
 /* FAQ Code */
 document.addEventListener('DOMContentLoaded', () => {
-    const faqContainer = document.querySelector('.faq-content');
-    faqContainer.addEventListener('click', (e) => {
-        const groupHeader = e.target.closest('.faq-group-header');
+    function initializeFAQ(language) {
+        const faqContainer = document.querySelector(`.${language} .faq-content`); // Target the FAQ container based on the language
+        faqContainer.addEventListener('click', (e) => {
+            const groupHeader = e.target.closest('.faq-group-header');
 
-        if (!groupHeader) return;
+            if (!groupHeader) return;
 
-        const group = groupHeader.parentElement;
-        const groupBody = group.querySelector('.faq-group-body');
-        const icon = groupHeader.querySelector('i');
+            const group = groupHeader.parentElement;
+            const groupBody = group.querySelector('.faq-group-body');
+            const icon = groupHeader.querySelector('i');
 
-        /* Toggle Icon */
-        icon.classList.toggle('fa-plus');
-        icon.classList.toggle('fa-minus');
+            /* Toggle Icon */
+            icon.classList.toggle('fa-plus');
+            icon.classList.toggle('fa-minus');
 
-        /* Toggle Visibility of the body */
-        groupBody.classList.toggle('open');
+            /* Toggle Visibility of the body */
+            groupBody.classList.toggle('open');
 
-        /* Close other open FAQ bodies */
-        const otherGroups =faqContainer.querySelectorAll('.faq-group');
-        otherGroups.forEach((otherGroup) => {
-            if (otherGroup !== group) {
-                const otherGroupBody = otherGroup.querySelector('.faq-group-body');
-                const otherIcon = otherGroup.querySelector('.faq-group-header i');
-                otherGroupBody.classList.remove('open');
-                otherIcon.classList.remove('fa-minus');
-                otherIcon.classList.add('fa-plus');
-            }
-        })
+            /* Close other open FAQ bodies */
+            const otherGroups = faqContainer.querySelectorAll('.faq-group');
+            otherGroups.forEach((otherGroup) => {
+                if (otherGroup !== group) {
+                    const otherGroupBody = otherGroup.querySelector('.faq-group-body');
+                    const otherIcon = otherGroup.querySelector('.faq-group-header i');
+                    otherGroupBody.classList.remove('open');
+                    otherIcon.classList.remove('fa-minus');
+                    otherIcon.classList.add('fa-plus');
+                }
+            })
+        });
+    }
 
-    })
-})
+    initializeFAQ("english"); // Initialize FAQ functionality for English by default
+
+    const languageSelect = document.getElementById("languageSelect");
+
+    languageSelect.addEventListener("change", () => {
+        const selectedLanguage = languageSelect.value;
+        initializeFAQ(selectedLanguage); // Initialize FAQ functionality based on the selected language
+    });
+});
 
 /* Gallery */
-
 const imageData = {
     all: ['images/A1bathroom.jpg', 'images/A1bathroom2.jpg',
         'images/A1bathroom3.jpg','images/A1bed.jpg','images/A1bed2.jpg',
@@ -67,6 +76,7 @@ const imageData = {
 
 /* Function to display images based on selected category */
 function showCategory(category) {
+    console.log("Show Category English")
     const imagesContainer = document.getElementById('imageContainer');
     imagesContainer.innerHTML = ''; // Clear previous images
 
@@ -79,23 +89,35 @@ function showCategory(category) {
         imagesContainer.appendChild(imgElement);
     });
 }
+/* Function to display images based on selected category GR*/
+function showCategoryGR(category) {
+    console.log("Show Category Greece")
+    const imagesContainer = document.getElementById('imageContainerGR');
+    imagesContainer.innerHTML = ''; // Clear previous images
 
+    const images = imageData[category];
+    images.forEach(image => {
+        const imgElement = document.createElement('img');
+        imgElement.src = image;
+        imgElement.classList.add('image');
+        imgElement.addEventListener('click', () => openModalGR(image));
+        imagesContainer.appendChild(imgElement);
+    });
+}
 /* Function to display modal with clicked image */
 function openModal(image) {
+    console.log("Open Modal English")
     const modal = document.getElementById('myModal');
     const modalImg = document.getElementById('modalImage');
     modal.style.display = 'block';
     modalImg.src = image;
 }
+/* Function to display modal with clicked image GR*/
+function openModalGR(image) {
+    console.log("Open Modal Greek")
+    const modal = document.getElementById('myModalGR');
+    const modalImg = document.getElementById('modalImageGR');
+    modal.style.display = 'block';
+    modalImg.src = image;
+}
 
-/* Initially show all photos */
-showCategory('all');
-
-// Get the <span> element that closes the modal
-const span = document.getElementsByClassName('close')[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    const modal = document.getElementById('myModal');
-    modal.style.display = 'none';
-};

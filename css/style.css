@@ -383,6 +383,42 @@ html {
     text-align: center;
     padding: 15px;
 }
+/* FAQ GR */
+.helpGR {
+    padding: 100px 0;
+}
+.helpGR .faq-group {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+.helpGR .faq-group .faq-group-header {
+    padding: 20px 0;
+    margin-bottom: 15px;
+    position: relative;
+}
+.helpGR .faq-group .faq-group-header h4 {
+    font-weight: 600;
+    width: 95%;
+}
+.helpGR .faq-group .faq-group-header i {
+    position: absolute;
+    right: 0;
+    top: 35px;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+.helpGR .faq-group .faq-group-body {
+    display: none;
+}
+.helpGR .faq-group .faq-group-body.open {
+    display: block;
+}
+.faq-ask-question {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+}
 /* Booking */
 .booking {
     background: url("../images/bigbluepicfrompool.jpg") no-repeat;
@@ -656,6 +692,21 @@ html {
     text-decoration: none;
     cursor: pointer;
 }
+.closeGR {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.closeGR:hover,
+.closeGR:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
 /* Footer */
 .footer {
     padding: 40px 0;
@@ -752,7 +803,40 @@ html {
     display: block;
     width: 100%;
 }
-
+/* Language Button */
+.language-dropdown {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 25px;
+    padding: 2px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+.language-dropdown:hover {
+    background-color: var(--light-color);
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+.language-dropdown select {
+    border: #111111;
+    outline: #111111;
+    background-color: transparent;
+    font-size: 17px;
+    padding: 5px 5px;
+    cursor: pointer;
+}
+.language-dropdown select option {
+    font-size: 16px;
+    padding: 15px;
+    cursor: pointer;
+}
+.language-select .lan {
+    cursor: pointer;
+}
 /* Text Classes */
 .text-xxl {
     font-size: 3rem;
