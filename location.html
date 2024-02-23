@@ -332,7 +332,7 @@
                     <div class="tour-text">
                         <p class="text-md text-center">
                             Σε πολύ κοντινή απόσταση από το ξενοδοχείο Big Blue στην Αμαλιάπολη, θα βρείτε την πόλη του Αλμυρού (20 χλμ.)
-                            με το περίφημο δάσος Κουρί Αγχιάλου και το αεροδρόμιο της Νέας Αγχιάλου, Βόλου και Πηλίου, το διάσημο βουνό του Κένταυροι.
+                            με το περίφημο δάσος Κουρί, τις λίμνες Ζηρέλια, το χωριό της Νέας Αγχιάλου με το αεροδρόμιο, την πόλη του Βόλου και Πηλίου, το διάσημο βουνό των Κενταύρων.
                             Η Αμαλιάπολη (Μιτζέλα) απέχει περίπου 280 χιλιόμετρα από την Αθήνα και 230 χιλιόμετρα από τη Θεσσαλονίκη.
                         </p>
                         <p class="text-md text-center">
@@ -405,9 +405,11 @@
 
                 // Show/hide language content based on selection
                 if (selectedLanguage === 'english') {
+                    window.history.replaceState({}, document.title, 'location.html');
                     englishDiv.style.display = 'block';
                     greekDiv.style.display = 'none';
                 } else if (selectedLanguage === 'greek') {
+                    window.history.replaceState({}, document.title, 'location.html');
                     englishDiv.style.display = 'none';
                     greekDiv.style.display = 'block';
                 }

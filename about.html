@@ -484,9 +484,11 @@
 
                 // Show/hide language content based on selection
                 if (selectedLanguage === 'english') {
+                    window.history.replaceState({}, document.title, 'about.html');
                     englishDiv.style.display = 'block';
                     greekDiv.style.display = 'none';
                 } else if (selectedLanguage === 'greek') {
+                    window.history.replaceState({}, document.title, 'about.html');
                     englishDiv.style.display = 'none';
                     greekDiv.style.display = 'block';
                 }
