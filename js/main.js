@@ -1,8 +1,12 @@
-/* FAQ Code */
+/* FAQ and Mobile Version Code */
 document.addEventListener('DOMContentLoaded', () => {
+    /* Initializes the Frequently Asked Questions Body depending on the language. */
     function initializeFAQ(language) {
-        const faqContainer = document.querySelector(`.${language} .faq-content`); // Target the FAQ container based on the language
+        /* Targets the FAQ container based on the language */
+        const faqContainer = document.querySelector(`.${language} .faq-content`);
+        /* Waits for the user to click the Icon. then changes the icon and shows (or not) the body. */
         faqContainer.addEventListener('click', (e) => {
+            /* Gets the Header. */
             const groupHeader = e.target.closest('.faq-group-header');
 
             if (!groupHeader) return;
@@ -11,14 +15,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const groupBody = group.querySelector('.faq-group-body');
             const icon = groupHeader.querySelector('i');
 
-            /* Toggle Icon */
+            /* Toggles the Icon. */
             icon.classList.toggle('fa-plus');
             icon.classList.toggle('fa-minus');
 
-            /* Toggle Visibility of the body */
+            /* Toggles Visibility of the body. */
             groupBody.classList.toggle('open');
 
-            /* Close other open FAQ bodies */
+            /* Closes other open FAQ bodies. */
             const otherGroups = faqContainer.querySelectorAll('.faq-group');
             otherGroups.forEach((otherGroup) => {
                 if (otherGroup !== group) {
@@ -31,14 +35,19 @@ document.addEventListener('DOMContentLoaded', () => {
             })
         });
     }
+    /* Toggles the Menu (Mobile Menu - Main Menu). */
     function toggleMenu(language) {
-        console.log("Change: " + language)
+        /* Targets the hamburger-button based on the language. */
         const hamburgerButton = document.querySelector(`.${language} .hamburger-button`);
+        /* Targets the mobile-menu based on the language. */
         const mobileMenu = document.querySelector(`.${language} .mobile-menu`);
         hamburgerButton.addEventListener('click', () => mobileMenu.classList.toggle('active'))
     }
+    /* Initializes the English Body of the Page by Default. */
     toggleMenu("english");
-    initializeFAQ("english"); // Initialize FAQ functionality for English by default
+    initializeFAQ("english");
+
+    /* Detects which language user chose. */
     const languageSelect = document.getElementById("languageSelect");
     languageSelect.addEventListener("change", () => {
         const selectedLanguage = languageSelect.value;
@@ -48,7 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-/* Gallery */
+/* Gallery Code */
+
 const imageData = {
     all: ['images/A1bathroom.jpg', 'images/A1bathroom2.jpg',
         'images/A1bathroom3.jpg','images/A1bed.jpg','images/A1bed2.jpg',
@@ -80,12 +90,14 @@ const imageData = {
         'images/I2room.jpg', 'images/I2roombalcony.jpg', 'images/I2roombalcony2.jpg', 'images/I2roomfrombalcony.jpg'],
 };
 
-/* Function to display images based on selected category */
+/* Displays images based on selected category for English Language. */
 function showCategory(category) {
-    console.log("Show Category English")
+    /* Gets the element. */
     const imagesContainer = document.getElementById('imageContainer');
-    imagesContainer.innerHTML = ''; // Clear previous images
+    /* Clears previous images. */
+    imagesContainer.innerHTML = '';
 
+    /* Shows the images. */
     const images = imageData[category];
     images.forEach(image => {
         const imgElement = document.createElement('img');
@@ -95,12 +107,14 @@ function showCategory(category) {
         imagesContainer.appendChild(imgElement);
     });
 }
-/* Function to display images based on selected category GR*/
+/* Displays images based on selected category Greek Language. */
 function showCategoryGR(category) {
-    console.log("Show Category Greece")
+    /* Gets the element. */
     const imagesContainer = document.getElementById('imageContainerGR');
-    imagesContainer.innerHTML = ''; // Clear previous images
+    /* Clears previous images. */
+    imagesContainer.innerHTML = '';
 
+    /* Shows the images. */
     const images = imageData[category];
     images.forEach(image => {
         const imgElement = document.createElement('img');
@@ -110,17 +124,15 @@ function showCategoryGR(category) {
         imagesContainer.appendChild(imgElement);
     });
 }
-/* Function to display modal with clicked image */
+/* Displays modal with clicked image English Language. */
 function openModal(image) {
-    console.log("Open Modal English")
     const modal = document.getElementById('myModal');
     const modalImg = document.getElementById('modalImage');
     modal.style.display = 'block';
     modalImg.src = image;
 }
-/* Function to display modal with clicked image GR*/
+/* Displays modal with clicked image Greek Language. */
 function openModalGR(image) {
-    console.log("Open Modal Greek")
     const modal = document.getElementById('myModalGR');
     const modalImg = document.getElementById('modalImageGR');
     modal.style.display = 'block';
