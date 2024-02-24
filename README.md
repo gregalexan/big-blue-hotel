@@ -1,6 +1,6 @@
 # Big Blue Hotel
 * A simple static website for our hotel in Amaliapolis.
-* You can take a look [here]()
+* You can take a look [here](https://gregalexan.github.io/big-blue-hotel/)
 ### Booking
 * For Booking Options -> click `Book Now!` in our website
 ### Location
