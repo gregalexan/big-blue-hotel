@@ -12,3 +12,5 @@
 2) [George](mailto:alexangeog@gmail.com)
 3) [Gregory](mailto:alexandgreg23@gmail.com)
 ### Socials 
+1) [FaceBook](https://www.facebook.com/BigBlueHotel.Amaliapoli)]
+2) [Instagram](https://www.instagram.com/bigblue_hotel/)
