@@ -991,7 +991,9 @@ html {
     line-height: 1.6;
 }
 /* Mobile Services */
-
+.mobile-services {
+    display: none;
+}
 
 
 /* Media Queries */
