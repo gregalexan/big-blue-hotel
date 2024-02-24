@@ -1,4 +1,5 @@
 /* FAQ and Mobile Version Code */
+
 /* Initializes the Frequently Asked Questions Body depending on the language. */
 function initializeFAQ(language) {
     /* Targets the FAQ container based on the language */
@@ -52,8 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const languageSelect = document.getElementById("languageSelect");
     languageSelect.addEventListener("change", () => {
         const selectedLanguage = languageSelect.value;
-        console.log(selectedLanguage)
-        initializeFAQ(selectedLanguage); // Initialize FAQ functionality based on the selected language
+        /* Initializes FAQ functionality and Toggles the Menu based on the selected language */
+        initializeFAQ(selectedLanguage);
         toggleMenu(selectedLanguage);
     });
 });
