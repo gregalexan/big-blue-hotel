@@ -1,4 +1,4 @@
-# big blue hotel
+# Big Blue Hotel
 * A simple static website for our hotel in Amaliapolis.
 * You can take a look [here]()
 ### Booking
