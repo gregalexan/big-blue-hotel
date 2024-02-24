@@ -72,7 +72,7 @@ const imageData = {
         'images/A3bathroom.jpg', 'images/A3bed.jpg', 'images/A3bed2.jpg', 'images/A3bedsideways.jpg',
         'images/A3picfrombed.jpg', 'images/A3room.jpg', 'images/A3wholeroom.jpg', 'images/Amaliapolis.jpg',
         'images/AmaliapolisBeach.jpg', 'images/bigbluepicfrompool.jpg', 'images/clock.jpg', 'images/I2.jpg',
-        'images/I2balcony.jpg', 'images/I2bathroom.jpg', 'images/I2bathroom2.jpg', 'images/I2kitchen.jpg',
+        'images/I2balcony.jpg', 'images/I2bathroom.jpg', 'images/I2bathroom2.jpg', 'images/I2Kitchen.jpg',
         'images/I2room.jpg', 'images/I2roombalcony.jpg', 'images/I2roombalcony2.jpg', 'images/I2roomfrombalcony.jpg',
         'images/jacuzzi.jpeg', 'images/privatepool.jpeg', 'images/wines(A2room1).jpg', 'images/wines(A2room1)2.jpg',
         'images/wines (A1).jpg', 'images/wines2(A1).jpg', 'images/wines3(A1).jpg'],
