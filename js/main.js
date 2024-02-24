@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const imageData = {
     all: ['images/A1bathroom.jpg', 'images/A1bathroom2.jpg',
         'images/A1bathroom3.jpg','images/A1bed.jpg','images/A1bed2.jpg',
-        'images/A1bedcloseup.jpg','images/A1kitchen.jpg', 'images/A1kitchen2.jpg',
+        'images/A1bedcloseup.jpg','images/A1kitchen.jpg', 'images/A1Kitchen2.jpg',
         'images/A1kitchen3.jpg', 'images/A1roomfromdoor.jpg', 'images/A1roomfromdoor2.jpg'
         ,'images/A1wholeroom.jpg', 'images/A1wholeroomfrombed.jpg', 'images/A1wholeroomfrombed2.jpg',
         'images/A1wholeroomfrombed3.jpg', 'images/A2picfromdoor.jpg', 'images/A2room1bed.jpg',
