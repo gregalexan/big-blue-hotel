@@ -1,48 +1,49 @@
 /* FAQ and Mobile Version Code */
+/* Initializes the Frequently Asked Questions Body depending on the language. */
+function initializeFAQ(language) {
+    /* Targets the FAQ container based on the language */
+    const faqContainer = document.querySelector(`.${language} .faq-content`);
+    /* Waits for the user to click the Icon. then changes the icon and shows (or not) the body. */
+    faqContainer.addEventListener('click', (e) => {
+        /* Gets the Header. */
+        const groupHeader = e.target.closest('.faq-group-header');
+
+        if (!groupHeader) return;
+
+        const group = groupHeader.parentElement;
+        const groupBody = group.querySelector('.faq-group-body');
+        const icon = groupHeader.querySelector('i');
+
+        /* Toggles the Icon. */
+        icon.classList.toggle('fa-plus');
+        icon.classList.toggle('fa-minus');
+
+        /* Toggles Visibility of the body. */
+        groupBody.classList.toggle('open');
+
+        /* Closes other open FAQ bodies. */
+        const otherGroups = faqContainer.querySelectorAll('.faq-group');
+        otherGroups.forEach((otherGroup) => {
+            if (otherGroup !== group) {
+                const otherGroupBody = otherGroup.querySelector('.faq-group-body');
+                const otherIcon = otherGroup.querySelector('.faq-group-header i');
+                otherGroupBody.classList.remove('open');
+                otherIcon.classList.remove('fa-minus');
+                otherIcon.classList.add('fa-plus');
+            }
+        })
+    });
+}
+/* Toggles the Menu (Mobile Menu - Main Menu). */
+function toggleMenu(language) {
+    /* Targets the hamburger-button based on the language. */
+    const hamburgerButton = document.querySelector(`.${language} .hamburger-button`);
+    /* Targets the mobile-menu based on the language. */
+    const mobileMenu = document.querySelector(`.${language} .mobile-menu`);
+    hamburgerButton.addEventListener('click', () => mobileMenu.classList.toggle('active'))
+}
 document.addEventListener('DOMContentLoaded', () => {
-    /* Initializes the Frequently Asked Questions Body depending on the language. */
-    function initializeFAQ(language) {
-        /* Targets the FAQ container based on the language */
-        const faqContainer = document.querySelector(`.${language} .faq-content`);
-        /* Waits for the user to click the Icon. then changes the icon and shows (or not) the body. */
-        faqContainer.addEventListener('click', (e) => {
-            /* Gets the Header. */
-            const groupHeader = e.target.closest('.faq-group-header');
-
-            if (!groupHeader) return;
-
-            const group = groupHeader.parentElement;
-            const groupBody = group.querySelector('.faq-group-body');
-            const icon = groupHeader.querySelector('i');
-
-            /* Toggles the Icon. */
-            icon.classList.toggle('fa-plus');
-            icon.classList.toggle('fa-minus');
-
-            /* Toggles Visibility of the body. */
-            groupBody.classList.toggle('open');
-
-            /* Closes other open FAQ bodies. */
-            const otherGroups = faqContainer.querySelectorAll('.faq-group');
-            otherGroups.forEach((otherGroup) => {
-                if (otherGroup !== group) {
-                    const otherGroupBody = otherGroup.querySelector('.faq-group-body');
-                    const otherIcon = otherGroup.querySelector('.faq-group-header i');
-                    otherGroupBody.classList.remove('open');
-                    otherIcon.classList.remove('fa-minus');
-                    otherIcon.classList.add('fa-plus');
-                }
-            })
-        });
-    }
-    /* Toggles the Menu (Mobile Menu - Main Menu). */
-    function toggleMenu(language) {
-        /* Targets the hamburger-button based on the language. */
-        const hamburgerButton = document.querySelector(`.${language} .hamburger-button`);
-        /* Targets the mobile-menu based on the language. */
-        const mobileMenu = document.querySelector(`.${language} .mobile-menu`);
-        hamburgerButton.addEventListener('click', () => mobileMenu.classList.toggle('active'))
-    }
+    console.log("Loaded!")
     /* Initializes the English Body of the Page by Default. */
     toggleMenu("english");
     initializeFAQ("english");
