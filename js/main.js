@@ -1,3 +1,6 @@
+/* This is the Main JavaScript file of the Website */
+/* It is about the FAQ part, the Gallery and the Mobile Version of the Website. */
+
 /* FAQ and Mobile Version Code */
 
 /* Initializes the Frequently Asked Questions Body depending on the language. */
@@ -88,7 +91,7 @@ const imageData = {
     A3: ['images/A3bathroom.jpg', 'images/A3bed.jpg', 'images/A3bed2.jpg', 'images/A3bedsideways.jpg',
         'images/A3picfrombed.jpg', 'images/A3room.jpg', 'images/A3wholeroom.jpg'],
     I2: ['images/I2.jpg',
-        'images/I2balcony.jpg', 'images/I2bathroom.jpg', 'images/I2bathroom2.jpg', 'images/I2kitchen.jpg',
+        'images/I2balcony.jpg', 'images/I2bathroom.jpg', 'images/I2bathroom2.jpg', 'images/I2Kitchen.jpg',
         'images/I2room.jpg', 'images/I2roombalcony.jpg', 'images/I2roombalcony2.jpg', 'images/I2roomfrombalcony.jpg'],
 };
 
