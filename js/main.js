@@ -1,13 +1,13 @@
 /* This is the Main JavaScript file of the Website */
-/* It is about the FAQ part, the Gallery and the Mobile Version of the Website. */
+/* It is about the FAQ part, the Gallery, and the Mobile Version of the Website. */
 
 /* FAQ and Mobile Version Code */
 
-/* Initializes the Frequently Asked Questions Body depending on the language. */
-function initializeFAQ(language) {
-    /* Targets the FAQ container based on the language */
-    const faqContainer = document.querySelector(`.${language} .faq-content`);
-    /* Waits for the user to click the Icon. then changes the icon and shows (or not) the body. */
+/* Initializes the Frequently Asked Questions Body */
+function initializeFAQ() {
+    /* Targets the FAQ container */
+    const faqContainer = document.querySelector('.faq-content');
+    /* Waits for the user to click the Icon, then changes the icon and shows (or not) the body. */
     faqContainer.addEventListener('click', (e) => {
         /* Gets the Header. */
         const groupHeader = e.target.closest('.faq-group-header');
@@ -38,28 +38,21 @@ function initializeFAQ(language) {
         })
     });
 }
+
 /* Toggles the Menu (Mobile Menu - Main Menu). */
-function toggleMenu(language) {
-    /* Targets the hamburger-button based on the language. */
-    const hamburgerButton = document.querySelector(`.${language} .hamburger-button`);
-    /* Targets the mobile-menu based on the language. */
-    const mobileMenu = document.querySelector(`.${language} .mobile-menu`);
+function toggleMenu() {
+    /* Targets the hamburger-button */
+    const hamburgerButton = document.querySelector('.hamburger-button');
+    /* Targets the mobile-menu */
+    const mobileMenu = document.querySelector('.mobile-menu');
     hamburgerButton.addEventListener('click', () => mobileMenu.classList.toggle('active'))
 }
+
 document.addEventListener('DOMContentLoaded', () => {
     console.log("Loaded!")
-    /* Initializes the English Body of the Page by Default. */
-    toggleMenu("english");
-    initializeFAQ("english");
-
-    /* Detects which language user chose. */
-    const languageSelect = document.getElementById("languageSelect");
-    languageSelect.addEventListener("change", () => {
-        const selectedLanguage = languageSelect.value;
-        /* Initializes FAQ functionality and Toggles the Menu based on the selected language */
-        initializeFAQ(selectedLanguage);
-        toggleMenu(selectedLanguage);
-    });
+    /* Initializes the Page by Default. */
+    toggleMenu();
+    initializeFAQ();
 });
 
 /* Gallery Code */
@@ -112,7 +105,19 @@ function showCategory(category) {
         imagesContainer.appendChild(imgElement);
     });
 }
-/* Displays images based on selected category Greek Language. */
+/* Displays modal with clicked image English Language. */
+function openModal(image) {
+    const modal = document.getElementById('myModal');
+    const modalImg = document.getElementById('modalImage');
+    modal.style.display = 'block';
+    modalImg.src = image;
+
+    /* Closes the modal when clicking the close button */
+    document.querySelector("#myModal .close").addEventListener("click", function() {
+        modal.style.display = "none";
+    });
+}
+/* Displays images based on selected category for Greek Language. */
 function showCategoryGR(category) {
     /* Gets the element. */
     const imagesContainer = document.getElementById('imageContainerGR');
@@ -123,18 +128,11 @@ function showCategoryGR(category) {
     const images = imageData[category];
     images.forEach(image => {
         const imgElement = document.createElement('img');
-        imgElement.src = image;
+        imgElement.src = '../' + image;
         imgElement.classList.add('image');
-        imgElement.addEventListener('click', () => openModalGR(image));
+        imgElement.addEventListener('click', () => openModalGR('../' + image));
         imagesContainer.appendChild(imgElement);
     });
-}
-/* Displays modal with clicked image English Language. */
-function openModal(image) {
-    const modal = document.getElementById('myModal');
-    const modalImg = document.getElementById('modalImage');
-    modal.style.display = 'block';
-    modalImg.src = image;
 }
 /* Displays modal with clicked image Greek Language. */
 function openModalGR(image) {
@@ -142,4 +140,9 @@ function openModalGR(image) {
     const modalImg = document.getElementById('modalImageGR');
     modal.style.display = 'block';
     modalImg.src = image;
+
+    /* Closes the modal when clicking the close button */
+    document.querySelector("#myModalGR .closeGR").addEventListener("click", function() {
+        modal.style.display = "none";
+    });
 }
