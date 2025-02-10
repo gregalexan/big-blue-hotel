@@ -1,0 +1,91 @@
+/* Gallery Styles */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Default: 4 images per row */
+  grid-gap: 25px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  background-color: #9FE4FF;
+  padding: 35px;
+  border-radius: 15px;
+  border: 2px dashed #4891ff;
+}
+
+/* Responsive grid for different screen sizes */
+@media (max-width: 1150px) {
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 images per row */
+  }
+}
+
+@media (max-width: 680px) {
+  .photo-grid {
+    grid-template-columns: repeat(1, 1fr); /* 1 image per row */
+  }
+  .photo {
+    height: 250px; /* Adjusted height */
+  }
+  .photo-grid {
+    justify-items: center;
+  }
+}
+
+/* Photo Styling */
+.photo {
+  width: 100%; /* Ensures the image fills the available space */
+  height: 200px; /* Fixed height for uniformity */
+  object-fit: cover; /* Ensures the image fully covers the area */
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.photo:hover {
+  transform: scale(1.05);
+}
+
+/* Pagination Controls */
+.pagination-controls {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+  background: whitesmoke;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.modal-image {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 15px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: none;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+  color: black;
+}

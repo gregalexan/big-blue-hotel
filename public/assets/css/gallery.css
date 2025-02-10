@@ -15,16 +15,16 @@
 /* Responsive grid for different screen sizes */
 @media (max-width: 1150px) {
   .photo-grid {
-      grid-template-columns: repeat(2, 1fr); /* 2 images per row */
+    grid-template-columns: repeat(2, 1fr); /* 2 images per row */
   }
 }
 
 @media (max-width: 680px) {
   .photo-grid {
-      grid-template-columns: repeat(1, 1fr); /* 1 image per row */
+    grid-template-columns: repeat(1, 1fr); /* 1 image per row */
   }
   .photo {
-    height: 300px;
+    height: 250px; /* Adjusted height */
   }
   .photo-grid {
     justify-items: center;
@@ -33,9 +33,9 @@
 
 /* Photo Styling */
 .photo {
-  width: 350px; /* Make images fill their grid space */
-  height: 300px;
-  object-fit: cover;
+  width: 100%; /* Ensures the image fills the available space */
+  height: 200px; /* Fixed height for uniformity */
+  object-fit: cover; /* Ensures the image fully covers the area */
   border-radius: 10px;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
@@ -70,7 +70,7 @@
   position: relative;
   background: whitesmoke;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .modal-image {
@@ -89,4 +89,3 @@
   cursor: pointer;
   color: black;
 }
-

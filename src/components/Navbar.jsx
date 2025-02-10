@@ -1,22 +1,27 @@
 import React, { useRef } from 'react';
 
-
 function Navbar() {
   const mobileMenuRef = useRef(null);
 
   // Συνάρτηση για την εναλλαγή κατάστασης του μενού
   const toggleMenu = () => {
     if (mobileMenuRef.current) {
-      mobileMenuRef.current.classList.toggle('active'); // Χρησιμοποιούμε classList αντί για classNameList
+      mobileMenuRef.current.classList.toggle('active');
     }
   };
 
-  
+  // Function to handle the redirect to the Greek version of the current page
+  const handleGreekRedirect = () => {
+    const currentPath = window.location.pathname;
+    const greekPath = `/greek${currentPath}`;
+    window.location.href = greekPath;
+  };
+
   return (
     <div>
       <nav className="navbar">
         <div className="container">
-          {/* <!-- Logo of the Hotel. --> */}
+          {/* Logo of the Hotel */}
           <div className="logo">
             <a href="/">
               <img
@@ -25,7 +30,7 @@ function Navbar() {
               />
             </a>
           </div>
-          {/* <!-- Main Menu of the Website. --> */}
+          {/* Main Menu of the Website */}
           <div className="main-menu">
             <ul>
               <li>
@@ -54,29 +59,29 @@ function Navbar() {
                 </a>
               </li>
               <li>
-                <a href="/location#tours" aria-label="Big Blue Hotel in Amaliapolis provides the user a list of Tours in Almyros , Volos , Pelion , Sporades and Panagia Xenia.">
+                <a href="/location#tours" aria-label="Big Blue Hotel in Amaliapolis provides the user a list of Tours in Almyros, Volos, Pelion, Sporades, and Panagia Xenia.">
                   Tours
                 </a>
               </li>
               <li>
-                <a href="/#help" aria-label="Big Blue Hotel Frequently asked Questions are answered for the users convenience">
+                <a href="/#help" aria-label="Big Blue Hotel Frequently asked Questions are answered for the user's convenience">
                   Get Help
                 </a>
               </li>
               <li>
                 <a className="btn btn-primary" href="/book" aria-label="Booking Page of Big Blue Hotel in Amaliapolis Greece.">
-                  <i className="fas fa-user"></i> Book Now!{' '}
+                  <i className="fas fa-user"></i> Book Now!
                 </a>
               </li>
             </ul>
           </div>
-          {/* <!-- Mobile Version --> */}
+          {/* Mobile Version */}
           <button className="hamburger-button" onClick={toggleMenu}>
             <div className="hamburger-line"></div>
             <div className="hamburger-line"></div>
             <div className="hamburger-line"></div>
           </button>
-          {/* <!-- Mobile Menu --> */}
+          {/* Mobile Menu */}
           <div className="mobile-menu" ref={mobileMenuRef}>
             <ul>
               <li>
@@ -105,18 +110,18 @@ function Navbar() {
                 </a>
               </li>
               <li>
-                <a href="/location#tours" aria-label="Big Blue Hotel in Amaliapolis provides the user a list of Tours in Almyros , Volos , Pelion , Sporades and Panagia Xenia.">
+                <a href="/location#tours" aria-label="Big Blue Hotel in Amaliapolis provides the user a list of Tours in Almyros, Volos, Pelion, Sporades, and Panagia Xenia.">
                   Tours
                 </a>
               </li>
               <li>
-                <a href="/#help" aria-label="Big Blue Hotel Frequently asked Questions are answered for the users convenience">
+                <a href="/#help" aria-label="Big Blue Hotel Frequently asked Questions are answered for the user's convenience">
                   Get Help
                 </a>
               </li>
               <li>
                 <a className="btn btn-primary" href="/book" aria-label="Booking Page of Big Blue Hotel in Amaliapolis Greece.">
-                  <i className="fas fa-user"></i> Book Now!{' '}
+                  <i className="fas fa-user"></i> Book Now!
                 </a>
               </li>
             </ul>
