@@ -13,6 +13,7 @@
     "express": "^4.21.2",
     "mysql2": "^3.12.0",
     "next": "^15.1.6",
+    "next-sitemap": "^4.2.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-hash-link": "^2.4.3",

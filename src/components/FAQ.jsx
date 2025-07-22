@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 function FAQ() {
@@ -98,17 +99,17 @@ function FAQ() {
               <div className={`faq-group-body ${openGroup === 3 ? 'open' : ''}`}>
                 <p>Yes, in Amaliapolis there are 3 underwater museums.
                   More information can be found by clicking {' '}
-                  <a href="https://wetravel.gr/amaliapoli-to-chorio-tou-pagasitikou-me-ta-3-ypovrychia-mouseia/" aria-label="Big Blue Hotel is recommending its customers to visit 3 underwater museums in Amaliapolis" target="_blank">
+                  <Link href="https://wetravel.gr/amaliapoli-to-chorio-tou-pagasitikou-me-ta-3-ypovrychia-mouseia/" aria-label="Big Blue Hotel is recommending its customers to visit 3 underwater museums in Amaliapolis" target="_blank">
                     <u>here</u>
-                  </a></p>
+                  </Link></p>
                 <p>Also, the beach has various water sports.</p>
                 <p>Furthermore, Big Blue Hotel is very close to 2 very well-known monasteries.
                   The first one is the New Holy Monastery of Xenia near Almyros.
                   As well as the Old Holy Monastery of Ano Xenia near Mount Othrys.</p>
                 <p>You can take a look to our suggested Tours and Excursions by clicking {' '}
-                  <a href="https://bigbluehotel.net/location.html#tours" target="_blank" aria-label="Travels the user to our Suggested Tours near Amaliapolis Greece in the Location html page of big blue hotel">
+                  <Link href="https://bigbluehotel.net/location.html#tours" target="_blank" aria-label="Travels the user to our Suggested Tours near Amaliapolis Greece in the Location html page of big blue hotel">
                     <u>here</u>
-                  </a> </p>
+                  </Link> </p>
               </div>
             </div>
 

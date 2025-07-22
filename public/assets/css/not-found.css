@@ -1,0 +1,19 @@
+.not-found {
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+.not-found a {
+    line-height: 2.5;
+    color: #4891ff;
+    transition: all 0.3s ease-in-out, transform 0.3s ease-in-out;
+    text-decoration: underline;
+}
+
+.not-found a:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+}

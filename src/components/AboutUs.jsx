@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 function AboutUs() {
@@ -23,13 +24,13 @@ function AboutUs() {
             <p className="about-text-down">
                 Feel free to press the button below to know more about Big Blue Hotel.
             </p>
-            <a
+            <Link
                 className="btn btn-primary"
                 href="/about"
                 aria-label="Page with Information about Big Blue Hotel in Amaliapolis Greece. Know More about Big Blue Hotel"
             >
                 Read More
-            </a>
+            </Link>
 
         </div>
     </section>

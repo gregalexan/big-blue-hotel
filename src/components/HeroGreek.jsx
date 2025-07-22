@@ -23,7 +23,7 @@ function HeroGreek() {
               <p className="hero-text">
                 Το μοναδικό ξενοδοχείο στην Αμαλιάπολη με ιδιωτική πισίνα και τζακούζι!
               </p>
-              <div className="hero-buttons">
+              <div className="hero-buttons" style={{gap: '15px', textAlign: 'center'}}>
                 <a href="/greek/book" aria-label="Σελίδα Κρατήσεων του Big Blue Hotel στην Αμαλιάπολη. Κάντε Κράτηση τώρα!" className="btn btn-primary">
                   <i className="fas fa-user"></i> Κάντε Κράτηση!
                 </a>
@@ -32,7 +32,7 @@ function HeroGreek() {
             </div>
             <div className="column">
                 <Image 
-                    src="/assets/images/BigBlue/Big_Blue_Hotel_Room_BigBlue_9.jpg"
+                    src="/assets/images/BigBlue/Big_Blue_Hotel_Room_BigBlue_9.webp"
                     alt="Το Big Blue Hotel στην Αμαλιάπολη Μαγνησίας Ελλάδα είναι το μόνο ξενοδοχείο στην Αμαλιάπολη και τον Άλμυρο με ιδιωτική πισίνα"
                     width={700}
                     height={800}
@@ -40,10 +40,10 @@ function HeroGreek() {
                     objectFit="cover"
                     priority={true}
                     placeholder='blur'
-                    blurDataURL='/assets/images/BigBlue/Big_Blue_Hotel_Room_BigBlue_9.jpg'
+                    blurDataURL='/assets/images/BigBlue/Big_Blue_Hotel_Room_BigBlue_9.webp'
                     />
                     <Image
-                    src="/assets/images/A1/Big_Blue_Hotel_Room_A1_1.jpg"
+                    src="/assets/images/A1/Big_Blue_Hotel_Room_A1_1.webp"
                     alt="Το Big Blue Hotel στην Αμαλιάπολη, μια πόλη κοντά στον Άλμυρο, Ελλάδα, με ένα πολυτελές δωμάτιο."
                     width={700}
                     height={800}
@@ -51,13 +51,13 @@ function HeroGreek() {
                     objectFit="cover"
                     priority={true}
                     placeholder='blur'
-                    blurDataURL='/assets/images/A1/Big_Blue_Hotel_Room_A1_1.jpg'
+                    blurDataURL='/assets/images/A1/Big_Blue_Hotel_Room_A1_1.webp'
                     />
                     </div>
                     </div>
                     <div className="column">
                     <Image
-                        src="/assets/images/BigBlue/Big_Blue_Hotel_Room_BigBlue_1.jpg"
+                        src="/assets/images/BigBlue/Big_Blue_Hotel_Room_BigBlue_1.webp"
                         alt="Το Big Blue Hotel στην Αμαλιάπολη, κοντά στον Άλμυρο, με ιδιωτική πισίνα και τζακούζι"
                         width={700}
                         height={800}
@@ -65,10 +65,10 @@ function HeroGreek() {
                         objectFit="cover"
                         priority={true}
                         placeholder='blur'
-                        blurDataURL='/assets/images/BigBlue/Big_Blue_Hotel_Room_BigBlue_1.jpg'
+                        blurDataURL='/assets/images/BigBlue/Big_Blue_Hotel_Room_BigBlue_1.webp'
                     />
                     <Image
-                        src="/assets/images/BigBlue/Big_Blue_Hotel_Room_BigBlue_4.jpg"
+                        src="/assets/images/BigBlue/Big_Blue_Hotel_Room_BigBlue_4.webp"
                         alt="Το Big Blue Hotel στην Αμαλιάπολη είναι το μόνο ξενοδοχείο στην Αμαλιάπολη και τον Άλμυρο με τζακούζι"
                         width={700}
                         height={800}
@@ -76,10 +76,10 @@ function HeroGreek() {
                         objectFit="cover"
                         priority={true}
                         placeholder='blur'
-                        blurDataURL='/assets/images/BigBlue/Big_Blue_Hotel_Room_BigBlue_4.jpg'
+                        blurDataURL='/assets/images/BigBlue/Big_Blue_Hotel_Room_BigBlue_4.webp'
                     />
                     <Image
-                        src="/assets/images/BigBlue/Big_Blue_Hotel_Room_BigBlue_12.jpg"
+                        src="/assets/images/BigBlue/Big_Blue_Hotel_Room_BigBlue_12.webp"
                         alt="Ένα πολυτελές δωμάτιο στο Big Blue Hotel στην Αμαλιάπολη με πολλές ανέσεις και υπηρεσίες που παρέχονται, περιλαμβανομένων των τιμών"
                         width={700}
                         height={800}
@@ -87,7 +87,7 @@ function HeroGreek() {
                         objectFit="cover"
                         priority={true}
                         placeholder='blur'
-                        blurDataURL='/assets/images/BigBlue/Big_Blue_Hotel_Room_BigBlue_12.jpg'
+                        blurDataURL='/assets/images/BigBlue/Big_Blue_Hotel_Room_BigBlue_12.webp'
                     />
 
           </div>

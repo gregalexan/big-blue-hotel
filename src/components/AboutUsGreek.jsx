@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 function AboutUsGreek() {
@@ -22,13 +23,13 @@ function AboutUsGreek() {
             <p className="about-text-down">
                 Πατήστε το κουμπί από κάτω για να μάθετε περισσότερα σχετικά με το Big Blue Hotel.
             </p>
-            <a
+            <Link
                 className="btn btn-primary"
-                href="/about"
+                href="/greek/about"
                 aria-label="Σελιδα με πληροφοριες σχετικα με το Big Blue Hotel στην Αμαλιαπολη"
             >
                 Περισσότερα
-            </a>
+            </Link>
 
         </div>
     </section>

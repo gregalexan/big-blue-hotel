@@ -11,7 +11,7 @@ import HeroGreek from "@/components/HeroGreek";
 import FAQGreek from "@/components/FAQGreek";
 
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const data = {
     title: "Big Blue Hotel | Κεντρική Σελίδα",
     description: "Το Ξενοδοχείο Big Blue είναι ένα πολυτελές ξενοδοχείο στην Αμαλιάπολη, ένα χωριό κοντά στον Αλμυρό και το Βόλο της Μαγνησίας, στην Ελλάδα. Το Big Blue Hotel προσφέρει μια χαλαρωτική διαμονή σε πλήρως εξοπλισμένα και άνετα δωμάτια.",
@@ -40,12 +40,14 @@ function Home({ title, description }) {
       <Head>
         <title>{title}</title>
         <meta charSet="UTF-8" />
+        <meta name="language" content="el"></meta>
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content={description} />
         <meta name="keywords" content="Big Blue Hotel Αμαλιάπολη, Αμαλιάπολη Ξενοδοχεία, Ξενοδοχείο κοντά στον Αλμυρό, Ξενοδοχείο κοντά στον Βόλο" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content="https://bigbluehotel.net/assets/images/BigBlue/Big_Blue_Hotel_Room_BigBlue_1.jpg" />
+        <meta property="og:image" content="https://bigbluehotel.net/assets/images/BigBlue/Big_Blue_Hotel_Room_BigBlue_1.webp" />
         <meta property="og:url" content="https://bigbluehotel.net/greek" />
         <meta property="og:type" content="website" />
         <link rel="apple-touch-icon" sizes="180x180" href="https://bigbluehotel.net/assets/images/images2/logo.JPG" />

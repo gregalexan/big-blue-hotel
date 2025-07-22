@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import React from 'react'
+import Link from 'next/link'
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const data = {
       title: "Big Blue Hotel | Book",
       description: "This is the official Booking Page of Big Blue Hotel in Amaliapolis. The reason we want you to contact us for a booking is that many times we negotiate the price of the room, so it is a benefit we provide you! Book now to Big Blue Hotel and you are not going to regret this!",
@@ -18,6 +19,7 @@ function Book({title, description}) {
         <Head>
             <title>{title}</title>
             <meta charSet="UTF-8" />
+            <meta name="language" content="en"></meta>
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             
             {/* Confirmation of Ownership */}
@@ -39,19 +41,19 @@ function Book({title, description}) {
             <meta property="og:url" content="https://bigbluehotel.net" />
             
             {/* Apple Touch Icon (for iOS devices) */}
-            <link rel="apple-touch-icon" sizes="180x180" href="https://bigbluehotel.net/images/images2/logo.jpg" />
+            <Link rel="apple-touch-icon" sizes="180x180" href="https://bigbluehotel.net/images/images2/logo.jpg" />
             
             {/* Android Chrome Icon */}
-            <link rel="icon" sizes="192x192" href="https://bigbluehotel.net/images/images2/logo.jpg" />
+            <Link rel="icon" sizes="192x192" href="https://bigbluehotel.net/images/images2/logo.jpg" />
             
             {/* SEO end */}
-            <link rel="preconnect" href="https://fonts.googleapis.com" />
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-            <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-            <link rel="stylesheet" href="css/style.css" />
+            <Link rel="preconnect" href="https://fonts.googleapis.com" />
+            <Link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+            <Link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+            <Link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <Link rel="stylesheet" href="css/style.css" />
             
-            <link rel="shortcut icon" href="https://bigbluehotel.net/images/images2/logo.JPG" type="image/x-icon" />
+            <Link rel="shortcut icon" href="https://bigbluehotel.net/images/images2/logo.JPG" type="image/x-icon" />
         </Head>
 
         <div>
@@ -65,29 +67,29 @@ function Book({title, description}) {
                         Big Blue Hotel
                     </h2>
                     <div className="booking-container">
-                    <div className="booking-contact">
-                            <div>
-                                <h4><i className="far fa-envelope"></i>Email</h4>
-                                <ul>
-                                    <li><a href="mailto:hotel.amaliapolis@gmail.com" aria-label="Email of Big Blue Hotel in Amaliapolis to contact">
-                                        1) hotel.amaliapolis@gmail.com</a></li>
-                                    <li><a href="mailto:alexangeog@gmail.com" aria-label="Email of Big Blue Hotel in Amaliapolis to contact">
-                                        2) alexangeog@gmail.com</a></li>
-                                    <li><a href="mailto:alexandrougrigorios@gmail.com" aria-label="Email of Big Blue Hotel in Amaliapolis to contact">
-                                        3) alexandrougrigorios@gmail.com</a></li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h4><i className="fas fa-mobile-alt"></i> Phone Call</h4>
-                                <ul>
-                                    <li><a href="tel:6972407403" aria-label="Phone of Big Blue Hotel in Amaliapolis to contact">
-                                        1) +30 6972407403</a></li>
-                                    <li><a href="tel:6977623928" aria-label="Phone of Big Blue Hotel in Amaliapolis to contact">
-                                        2) +30 6977623928</a></li>
-                                    <li><a href="tel:6996532442" aria-label="Phone of Big Blue Hotel in Amaliapolis to contact">
-                                        3) +30 6996532442</a></li>
-                                </ul>
-                            </div>
+                        <div className="booking-contact">
+                                <div>
+                                    <h4><i className="far fa-envelope"></i>Email</h4>
+                                    <ul>
+                                        <li><a href="mailto:hotel.amaliapolis@gmail.com" aria-label="Email of Big Blue Hotel in Amaliapolis to contact">
+                                            1) hotel.amaliapolis@gmail.com</a></li>
+                                        <li><a href="mailto:alexangeog@gmail.com" aria-label="Email of Big Blue Hotel in Amaliapolis to contact">
+                                            2) alexangeog@gmail.com</a></li>
+                                        <li><a href="mailto:alexandrougrigorios@gmail.com" aria-label="Email of Big Blue Hotel in Amaliapolis to contact">
+                                            3) alexandrougrigorios@gmail.com</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4><i className="fas fa-mobile-alt"></i> Phone Call</h4>
+                                    <ul>
+                                        <li><a href="tel:6972407403" aria-label="Phone of Big Blue Hotel in Amaliapolis to contact">
+                                            1) +30 6972407403</a></li>
+                                        <li><a href="tel:6977623928" aria-label="Phone of Big Blue Hotel in Amaliapolis to contact">
+                                            2) +30 6977623928</a></li>
+                                        <li><a href="tel:6996532442" aria-label="Phone of Big Blue Hotel in Amaliapolis to contact">
+                                            3) +30 6996532442</a></li>
+                                    </ul>
+                                </div>
                         </div>
                         <div className="booking-form">
                             <form action="https://api.web3forms.com/submit" method="POST">
@@ -135,7 +137,7 @@ function Book({title, description}) {
                                         <option value="4">4+ People</option>
                                     </select>
                                 </div>
-                                <input type="hidden" name="redirect" value="/" />
+                                <input type="hidden" name="redirect" value="/confirm" />
                                 <div className="booking-button-class">
                                     <button className="booking-button" type="submit">
                                         Submit Reservation
@@ -201,7 +203,7 @@ function Book({title, description}) {
                                         <option value="4">4+ People</option>
                                     </select>
                                 </div>
-                                <input type="hidden" name="redirect" value="/book" />
+                                <input type="hidden" name="redirect" value="/confirm" />
                                 <div className="booking-button-class">
                                     <button className="booking-button" type="submit">
                                         Submit Reservation

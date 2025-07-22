@@ -1,3 +1,9 @@
-# https://www.robotstxt.org/robotstxt.html
+# *
 User-agent: *
-Disallow:
+Allow: /
+
+# Host
+Host: https://bigbluehotel.net
+
+# Sitemaps
+Sitemap: https://bigbluehotel.net/sitemap.xml

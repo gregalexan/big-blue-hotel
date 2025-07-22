@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import { getAllPhotos } from "@/helper/gallery";
 import Image from "next/image";
 import Head from "next/head";
+import Link from 'next/link'
 
-export async function getServerSideProps() {
+
+export async function getStaticProps() {
   const data = {
     title: "Big Blue Hotel | Gallery",
     description: "Big Blue Hotel in Amaliapolis has created a Gallery with photos for each room and the hotel as a whole. Visit our Gallery Page to see the amazing, cozy, and comfortable rooms Big Blue Hotel offers for a relaxing stay in Amaliapolis.",
@@ -51,6 +53,7 @@ function Gallery({title, description}) {
       const startIdx = (currentPage + 1) * 8;
       setPaginatedPhotos(filteredPhotos.slice(startIdx, startIdx + 8));
       setCurrentPage(currentPage + 1);
+      window.scrollTo(0, 0);
     }
   };
 
@@ -59,7 +62,9 @@ function Gallery({title, description}) {
       const startIdx = (currentPage - 1) * 8;
       setPaginatedPhotos(filteredPhotos.slice(startIdx, startIdx + 8));
       setCurrentPage(currentPage - 1);
+      window.scrollTo(0, 0);
     }
+
   };
 
   const openOverlay = (src) => {
@@ -75,6 +80,7 @@ function Gallery({title, description}) {
       <Head>
           <title>{title}</title>
           <meta charSet="UTF-8" />
+          <meta name="language" content="en"></meta>
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           
           {/* Confirmation of Ownership */}
@@ -87,28 +93,28 @@ function Gallery({title, description}) {
           {/* Open Graph meta tags */}
           <meta property="og:title" content="Gallery of Big Blue Hotel in Amaliapolis" />
           <meta property="og:description" content="Big Blue Hotel just created a Gallery with photos of Amaliapolis, the Hotel, and the rooms it provides. Take a look and Book now!" />
-          <meta property="og:image" content="https://bigbluehotel.net/images/A3bedsideways.jpg" />
+          <meta property="og:image" content="https://bigbluehotel.net/images/A3bedsideways.webp" />
           <meta property="og:url" content="https://bigbluehotel.net" />
           <meta property="og:type" content="website" />
           
           {/* Facebook Card meta tags */}
-          <meta property="og:image" content="https://bigbluehotel.net/images/A3bedsideways.jpg" />
+          <meta property="og:image" content="https://bigbluehotel.net/images/A3bedsideways.webp" />
           <meta property="og:url" content="https://bigbluehotel.net" />
           
           {/* Apple Touch Icon (for iOS devices) */}
-          <link rel="apple-touch-icon" sizes="180x180" href="https://bigbluehotel.net/images/images2/logo.jpg" />
+          <Link rel="apple-touch-icon" sizes="180x180" href="https://bigbluehotel.net/images/images2/logo.JPG" />
           
           {/* Android Chrome Icon */}
-          <link rel="icon" sizes="192x192" href="https://bigbluehotel.net/images/images2/logo.jpg" />
+          <Link rel="icon" sizes="192x192" href="https://bigbluehotel.net/images/images2/logo.JPG" />
           
           {/* SEO end */}
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-          <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-          <link rel="stylesheet" href="css/style.css" />
+          <Link rel="preconnect" href="https://fonts.googleapis.com" />
+          <Link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <Link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+          <Link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+          <Link rel="stylesheet" href="css/style.css" />
           
-          <link rel="shortcut icon" href="https://bigbluehotel.net/images/images2/logo.JPG" type="image/x-icon" />
+          <Link rel="shortcut icon" href="https://bigbluehotel.net/images/images2/logo.JPG" type="image/x-icon" />
       </Head>
 
       <div className={overlayImage ? "gallery-blurred" : ""}>
@@ -134,7 +140,7 @@ function Gallery({title, description}) {
               ))}
             </div>
 
-            <div className="photo-grid-background">
+            <div className="photo-grid-background" id="gallery">
               {/* Photo Grid with 2 rows & 4 columns */}
               <div className="photo-grid">
                 {paginatedPhotos.map((photo, index) => (

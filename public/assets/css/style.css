@@ -57,7 +57,7 @@ img {
 .navbar ul li a {
     padding: 5px 10px;
     display: block;
-    font-weight: 600;
+    font-weight: 550;
     transition: 0.5s;
 }
 .navbar ul li a:hover {
@@ -1286,7 +1286,7 @@ input:focus, select:focus {
     }
 }
 /* Media Queries */
-@media (max-width: 960px) {
+@media (max-width: 1100px) {
     /* Navbar */
     .navbar .main-menu {
         display: none;

@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
+import Link from 'next/link'
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const data = {
       title: "Big Blue Hotel | About",
       description: "This page is dedicated to help you learn more information about Big Blue Hotel in Amaliapolis.",
@@ -19,6 +20,7 @@ function About({title, description}) {
         <Head>
             <title>{title}</title>
             <meta charSet="UTF-8" />
+            <meta name="language" content="en"></meta>
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             
             {/* Confirmation of Ownership */}
@@ -31,22 +33,22 @@ function About({title, description}) {
             {/* Open Graph meta tags */}
             <meta property="og:title" content="Big Blue Hotel - Amaliapolis" />
             <meta property="og:description" content="Have you heard about Big Blue Hotel in Amaliapolis? It's a newly built hotel in Amaliapolis Greece and pays attention to every detail just to provide its customers relaxing holidays! Learn More!" />
-            <meta property="og:image" content="https://bigbluehotel.net/images/A3wholeroom.jpg" />
+            <meta property="og:image" content="https://bigbluehotel.net/images/A3wholeroom.webp" />
             <meta property="og:url" content="https://bigbluehotel.net" />
             <meta property="og:type" content="website" />
             
             {/* Facebook Card meta tags */}
-            <meta property="og:image" content="https://bigbluehotel.net/images/A3wholeroom.jpg" />
+            <meta property="og:image" content="https://bigbluehotel.net/images/A3wholeroom.webp" />
             <meta property="og:url" content="https://bigbluehotel.net" />
             
             {/* Apple Touch Icon (for iOS devices) */}
-            <link rel="apple-touch-icon" sizes="180x180" href="https://bigbluehotel.net/images/images2/logo.jpg" />
+            <Link rel="apple-touch-icon" sizes="180x180" href="https://bigbluehotel.net/images/images2/logo.JPG" />
             
             {/* Android Chrome Icon */}
-            <link rel="icon" sizes="192x192" href="https://bigbluehotel.net/images/images2/logo.jpg" />
+            <Link rel="icon" sizes="192x192" href="https://bigbluehotel.net/images/images2/logo.JPG" />
             
             {/* SEO end */}
-            <link rel="shortcut icon" href="https://bigbluehotel.net/images/images2/logo.JPG" type="image/x-icon" />
+            <Link rel="shortcut icon" href="https://bigbluehotel.net/images/images2/logo.JPG" type="image/x-icon" />
         </Head>
 
         <div>
@@ -58,46 +60,46 @@ function About({title, description}) {
                         <div className="about-us-photos-row">
                             <div className="about-us-photos-column">
                                 <Image 
-                                    src="/assets/images/A1/Big_Blue_Hotel_Room_A1_3.jpg"
+                                    src="/assets/images/A1/Big_Blue_Hotel_Room_A1_3.webp"
                                     alt='Room A1'
                                     width={100}
                                     height={100}
                                     layout='responsive'
                                     priority={true}
                                     placeholder='blur'
-                                    blurDataURL='/assets/images/A1/Big_Blue_Hotel_Room_A1_3.jpg'
+                                    blurDataURL='/assets/images/A1/Big_Blue_Hotel_Room_A1_3.webp'
                                 />
                                 <Image 
-                                    src="/assets/images/I2/Big_Blue_Hotel_Room_I2_7.jpg"
+                                    src="/assets/images/I2/Big_Blue_Hotel_Room_I2_7.webp"
                                     alt='Room I2'
                                     width={100}
                                     height={100}
                                     layout='responsive'
                                     priority={true}
                                     placeholder='blur'
-                                    blurDataURL='/assets/images/I2/Big_Blue_Hotel_Room_I2_7.jpg'
+                                    blurDataURL='/assets/images/I2/Big_Blue_Hotel_Room_I2_7.webp'
                                 />
                             </div>
                             <div className="about-us-photos-column">
                                 <Image 
-                                    src="/assets/images/A1/Big_Blue_Hotel_Room_A1_27.jpg"
+                                    src="/assets/images/A1/Big_Blue_Hotel_Room_A1_27.webp"
                                     alt='Room A1'
                                     width={100}
                                     height={100}
                                     layout='responsive'
                                     priority={true}
                                     placeholder='blur'
-                                    blurDataURL='/assets/images/A1/Big_Blue_Hotel_Room_A1_27.jpg'
+                                    blurDataURL='/assets/images/A1/Big_Blue_Hotel_Room_A1_27.webp'
                                 />
                                 <Image 
-                                    src="/assets/images/A3/Big_Blue_Hotel_Room_A3_17.jpg"
+                                    src="/assets/images/A3/Big_Blue_Hotel_Room_A3_17.webp"
                                     alt='Room A3'
                                     width={100}
                                     height={100}
                                     layout='responsive'
                                     priority={true}
                                     placeholder='blur'
-                                    blurDataURL='/assets/images/A3/Big_Blue_Hotel_Room_A3_17.jpg'
+                                    blurDataURL='/assets/images/A3/Big_Blue_Hotel_Room_A3_17.webp'
                                 />
                             </div>
                         </div>
@@ -138,14 +140,14 @@ function About({title, description}) {
                         <div className="mobile-grid-row">
                             <div className="mobile-grid-column">
                                 <Image 
-                                    src="/assets/images/A1/Big_Blue_Hotel_Room_A1_27.jpg"
+                                    src="/assets/images/A1/Big_Blue_Hotel_Room_A1_27.webp"
                                     alt='Room A1'
                                     width={100}
                                     height={100}
                                     layout='responsive'
                                     priority={true}
                                     placeholder='blur'
-                                    blurDataURL='/assets/images/A1/Big_Blue_Hotel_Room_A1_27.jpg'
+                                    blurDataURL='/assets/images/A1/Big_Blue_Hotel_Room_A1_27.webp'
                                 />
                             </div>
                         </div>
@@ -169,14 +171,14 @@ function About({title, description}) {
                         <div className="mobile-grid-row">
                             <div className="mobile-grid-column">
                                 <Image 
-                                    src="/assets/images/A1/Big_Blue_Hotel_Room_A1_3.jpg"
+                                    src="/assets/images/A1/Big_Blue_Hotel_Room_A1_3.webp"
                                     alt='Room A1'
                                     width={100}
                                     height={100}
                                     layout='responsive'
                                     priority={true}
                                     placeholder='blur'
-                                    blurDataURL='/assets/images/A1/Big_Blue_Hotel_Room_A1_3.jpg'
+                                    blurDataURL='/assets/images/A1/Big_Blue_Hotel_Room_A1_3.webp'
                                 />
                             </div>
                         </div>
@@ -185,14 +187,14 @@ function About({title, description}) {
                         <div className="mobile-grid-row">
                             <div className="mobile-grid-column">
                                 <Image 
-                                    src="/assets/images/I2/Big_Blue_Hotel_Room_I2_7.jpg"
+                                    src="/assets/images/I2/Big_Blue_Hotel_Room_I2_7.webp"
                                     alt='Room I2'
                                     width={100}
                                     height={100}
                                     layout='responsive'
                                     priority={true}
                                     placeholder='blur'
-                                    blurDataURL='/assets/images/I2/Big_Blue_Hotel_Room_I2_7.jpg'
+                                    blurDataURL='/assets/images/I2/Big_Blue_Hotel_Room_I2_7.webp'
                                 />
                             </div>
                         </div>
@@ -217,14 +219,14 @@ function About({title, description}) {
                         <div className="mobile-grid-row">
                             <div className="mobile-gird-column">
                                 <Image 
-                                    src="/assets/images/A3/Big_Blue_Hotel_Room_A3_17.jpg"
+                                    src="/assets/images/A3/Big_Blue_Hotel_Room_A3_17.webp"
                                     alt='Room A3'
                                     width={100}
                                     height={100}
                                     layout='responsive'
                                     priority={true}
                                     placeholder='blur'
-                                    blurDataURL='/assets/images/A3/Big_Blue_Hotel_Room_A3_17.jpg'
+                                    blurDataURL='/assets/images/A3/Big_Blue_Hotel_Room_A3_17.webp'
                                 />
                             </div>
                         </div>

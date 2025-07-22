@@ -2,9 +2,10 @@ import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
 import LocationPageHelp from '@/components/LocationPageHelp'
+import Link from 'next/link';
 
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const data = {
       title: "Big Blue Hotel | Amaliapolis",
       description: "Big Blue Hotel is located in Amaliapolis Greece. Here are some information about Amaliapolis, a beautiful seaside village in Central Greece. Also, Big Blue Hotel suggests some tours in Magnesia such as Volos, Almyros, Pelion, the two Monasteries of Panagia Xenia, and cruises to the Sporades Islands.",
@@ -21,6 +22,7 @@ function Location({ title, description }) {
         <Head>
             <title>{title}</title>
             <meta charSet="UTF-8" />
+            <meta name="language" content="en"></meta>
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             
             {/* Confirmation of Ownership */}
@@ -33,28 +35,28 @@ function Location({ title, description }) {
             {/* Open Graph meta tags */}
             <meta property="og:title" content="Big Blue Hotel in Amaliapolis" />
             <meta property="og:description" content="Big Blue Hotel is located in Amaliapolis Magnesia Greece, a beautiful seaside town near Almyros and Volos." />
-            <meta property="og:image" content="https://bigbluehotel.net/images/A1wholeroomfrombed.jpg" />
+            <meta property="og:image" content="https://bigbluehotel.net/assets/images/Big_Blue_Hotel_Room_A1_1.webp" />
             <meta property="og:url" content="https://bigbluehotel.net" />
             <meta property="og:type" content="website" />
             
             {/* Facebook Card meta tags */}
-            <meta property="og:image" content="https://bigbluehotel.net/images/A1wholeroomfrombed.jpg" />
+            <meta property="og:image" content="https://bigbluehotel.net/images/Big_Blue_Hotel_Room_A1_1.webp" />
             <meta property="og:url" content="https://bigbluehotel.net" />
             
             {/* Apple Touch Icon (for iOS devices) */}
-            <link rel="apple-touch-icon" sizes="180x180" href="https://bigbluehotel.net/images/images2/logo.jpg" />
+            <Link rel="apple-touch-icon" sizes="180x180" href="https://bigbluehotel.net/images/images2/logo.jpg" />
             
             {/* Android Chrome Icon */}
-            <link rel="icon" sizes="192x192" href="https://bigbluehotel.net/images/images2/logo.jpg" />
+            <Link rel="icon" sizes="192x192" href="https://bigbluehotel.net/images/images2/logo.jpg" />
             
             {/* SEO end */}
-            <link rel="preconnect" href="https://fonts.googleapis.com" />
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-            <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-            <link rel="stylesheet" href="css/style.css" />
+            <Link rel="preconnect" href="https://fonts.googleapis.com" />
+            <Link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+            <Link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+            <Link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <Link rel="stylesheet" href="css/style.css" />
             
-            <link rel="shortcut icon" href="https://bigbluehotel.net/images/images2/logo.JPG" type="image/x-icon" />
+            <Link rel="shortcut icon" href="https://bigbluehotel.net/images/images2/logo.JPG" type="image/x-icon" />
         </Head>
 
         <div>

@@ -4,7 +4,7 @@ import React from 'react'
 import LocationPageHelp from '@/components/LocationPageHelp'
 
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const data = {
       title: "Big Blue Hotel | Αμαλιάπολη",
       description: "Το Big Blue Hotel βρίσκεται στην Αμαλιάπολη, Ελλάδα. Πληροφορίες για την Αμαλιάπολη, ένα όμορφο χωριό κοντά στην Αλμυρό και τον Βόλο. Επίσης, το Big Blue Hotel προτείνει εκδρομές, όπως το Βόλο, η Αλμυρός και το Πήλιο, Παναγίας Ξενία και Σποράδες.",
@@ -21,6 +21,8 @@ function Location({ title, description }) {
         <Head>
             <title>{title}</title>
             <meta charSet="UTF-8" />
+            <meta name="language" content="el"></meta>
+
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             
             {/* Confirmation of Ownership */}
@@ -33,12 +35,12 @@ function Location({ title, description }) {
             {/* Open Graph meta tags */}
             <meta property="og:title" content="Big Blue Hotel στην Αμαλιάπολη" />
             <meta property="og:description" content="Big Blue Hotel βρίσκεται στην Αμαλιάπολη Μαγνησίας στην Ελλάδα, ένα πανέμορφο παραθαλάσσιο χωριό κοντά στον Αλμυρό και τον Βόλο." />
-            <meta property="og:image" content="https://bigbluehotel.net/assets/images/A1/Big_Blue_Hotel_Room_A1_1.jpg" />
+            <meta property="og:image" content="https://bigbluehotel.net/assets/images/A1/Big_Blue_Hotel_Room_A1_1.webp" />
             <meta property="og:url" content="https://bigbluehotel.net/greek/location" />
             <meta property="og:type" content="website" />
             
             {/* Facebook Card meta tags */}
-            <meta property="og:image" content="https://bigbluehotel.net/assets/images/A1/Big_Blue_Hotel_Room_A1_1.jpg" />
+            <meta property="og:image" content="https://bigbluehotel.net/assets/images/A1/Big_Blue_Hotel_Room_A1_1.webp" />
             <meta property="og:url" content="https://bigbluehotel.net/greek/location" />
             
             {/* Apple Touch Icon (for iOS devices) */}
